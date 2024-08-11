@@ -40,6 +40,36 @@ Step 2. Add the dependency
 	}
 ```
 
+## Layout Example:
+ **Add the following XML layout code to your activity_main.xml:**
+```xml
+ <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Other UI components can go here -->
+
+    <!-- LinearLayout to contain the Banner Ad -->
+    <LinearLayout
+        android:id="@+id/bannerAdContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp" />
+
+    <!-- Other UI components can go here -->
+
+</LinearLayout>
+```
+
+
 Step 3. In your MainActivity.kt, add the following code to initialize and load the banner ad:
 
 kotlin:
