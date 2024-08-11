@@ -66,30 +66,12 @@ kotlin:
            
  If you prefer Java, use the following setup in your MainActivity.java:
 
- import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-public class MainActivity extends AppCompatActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        enableEdgeToEdge();
-        setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            WindowInsetsCompat.Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         // Initialize Control class and load the banner ad
         Control control = new Control(this);
         String adUnitId = getString(R.string.admob_banner_id); // Fetch the AdMob banner ID from resources
         control.loadBannerAd(R.id.bannerAdContainer, adUnitId);
-    }
-}
-
+ 
   
 
       
