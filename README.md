@@ -108,6 +108,6 @@ kotlin:
       
 
 ## Demo
-Banner ads Small Layout |  
+BannerAds ads Small Layout |  BannerAds ads Medium Layout
 :-------------------------:|:-------------------------:
-<img src="1.png" width="350px"/>  |  
+<img src="1.png" width="250px"/>  |  <img src="1.png" width="250px"/> 
