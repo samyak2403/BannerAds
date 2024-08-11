@@ -1,32 +1,32 @@
-## BannerAds  Library
->Android library for add Naive Ads .
+# BannerAds Library
+
+An Android library for integrating Native Ads into your RecyclerView list items.
 
 ## Update
+
 - Updated to the latest version of Admob SDK
 - Supported on Android SDK 30, 31, 32, 33, 34
 - Updated RVAdapter to Kotlin
 
-## For developer
-To make your app can earn more revengue ` by Showing Native Ads into RecyclerView list items `. Please check more details from below.
+## For Developers
 
-## How to use NaiveAds RecyclerView Library
-Step 1. Add the JitPack repository to your build file 
-  ```
-  allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-  ```
-  If you are using Android Studio Bumble bee or latest version, add JitPack repository to `settings.gradle` file.
-  ```
-  dependencyResolutionManagement {
+To maximize your app's revenue by displaying Native Ads within RecyclerView list items, follow the instructions below.
+
+## How to Use the NaiveAds RecyclerView Library
+
+### Step 1: Add the JitPack Repository
+
+Add the JitPack repository to your project’s build file:
+
+**For Gradle (in `settings.gradle` for Android Studio Bumblebee or later):**
+
+```gradle
+dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' } // add this line
+        maven { url 'https://jitpack.io' } // Add this line
     }
 }
 ```
