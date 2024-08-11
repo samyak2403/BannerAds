@@ -1,42 +1,75 @@
-# Banner Ad Integration
+## BannerAds  Library
+>Android library for add Naive Ads .
 
-This repository contains a class for integrating Google AdMob banner ads into an Android application.
+## Update
+- Updated to the latest version of Admob SDK
+- Supported on Android SDK 30, 31, 32, 33, 34
+- Updated RVAdapter to Kotlin
 
-## Overview
+## For developer
+To make your app can earn more revengue ` by Showing Native Ads into RecyclerView list items `. Please check more details from below.
 
-The `Control` class helps you load and display banner ads using the Google Mobile Ads SDK. Follow the setup instructions below to integrate the banner ad into your Android project.
-
-## Prerequisites
-
-1. **Google Mobile Ads SDK**: Ensure you have added the Google Mobile Ads SDK to your project. Add the following dependency to your `build.gradle` file:
-
-    ```groovy
-    implementation 'com.google.android.gms:play-services-ads:22.0.0'
-    ```
-
-2. **AdMob Account**: You need an AdMob account to create an ad unit and obtain your Ad Unit ID for banner ads.
-
-## Setup Instructions
-
-### 1. Configure `activity_main.xml`
-
-Open your `activity_main.xml` file and add a `LinearLayout` where you want the banner ad to be displayed. Assign an ID to this layout.
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <!-- Other UI elements -->
-
-    <LinearLayout
-        android:id="@+id/bannerAdContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"/>
-</LinearLayout>
+## How to use NaiveAds RecyclerView Library
+Step 1. Add the JitPack repository to your build file 
+  ```
+  allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+  ```
+  If you are using Android Studio Bumble bee or latest version, add JitPack repository to `settings.gradle` file.
+  ```
+  dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // add this line
+    }
+}
 ```
+  
+  
+Step 2. Add the dependency
+  
+
+	dependencies {
+	        implementation 'com.github.samyak2403:BannerAds:1.0.1'
+	}
 
 
+Step 3. In your MainActivity.kt, add the following code to initialize and load the banner ad:
+
+kotlin:
+
+  
+
+        class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        // Initialize Control class and load the banner ad
+        val control = Control(this)
+        val adUnitId = getString(R.string.admob_banner_id) // Fetch the AdMob banner ID from resources
+        control.loadBannerAd(R.id.bannerAdContainer, adUnitId)
+    }
+}
+           
+ Add below code to setup your all Activity by Java.
+  
+
+      
+
+## Demo
+Native ads Small Layout |  Native ads Medium Layout
+:-------------------------:|:-------------------------:
+<img src="1.png" width="250px"/>  |  <img src="2.png" width="250px"/> 
