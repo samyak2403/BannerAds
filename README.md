@@ -1,6 +1,6 @@
 # BannerAds Library
 
-An Android library for integrating Native Ads into your RecyclerView list items.
+
 
 ## Update
 
@@ -10,9 +10,9 @@ An Android library for integrating Native Ads into your RecyclerView list items.
 
 ## For Developers
 
-To maximize your app's revenue by displaying Native Ads within RecyclerView list items, follow the instructions below.
+To maximize your app's revenue by displaying Banner Ads , follow the instructions below.
 
-## How to Use the NaiveAds RecyclerView Library
+## How to Use the BannerAds Library
 
 ### Step 1: Add the JitPack Repository
 
@@ -34,17 +34,17 @@ dependencyResolutionManagement {
   
 Step 2. Add the dependency
   
-
+```dependencies
 	dependencies {
 	        implementation 'com.github.samyak2403:BannerAds:1.0.1'
 	}
-
+```
 
 Step 3. In your MainActivity.kt, add the following code to initialize and load the banner ad:
 
 kotlin:
 
-  
+  ```kotlin
 
         class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +63,8 @@ kotlin:
         control.loadBannerAd(R.id.bannerAdContainer, adUnitId)
     }
 }
-           
+  ```
+```java         
  If you prefer Java, use the following setup in your MainActivity.java:
 
 
@@ -71,7 +72,7 @@ kotlin:
         Control control = new Control(this);
         String adUnitId = getString(R.string.admob_banner_id); // Fetch the AdMob banner ID from resources
         control.loadBannerAd(R.id.bannerAdContainer, adUnitId);
- 
+ ```
   
 
       
