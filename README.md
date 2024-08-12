@@ -1,6 +1,6 @@
 # BannerAds Library
 
-
+[![](https://www.jitpack.io/v/samyak2403/BannerAds.svg)](https://www.jitpack.io/#samyak2403/BannerAds)
 
 ## Update
 
