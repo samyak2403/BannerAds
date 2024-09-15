@@ -104,9 +104,6 @@ kotlin:
         control.loadBannerAd(R.id.bannerAdContainer, adUnitId);
  ```
   
-<a href="https://github.com/angular/samyak2403/BannerAds/contributors">
-  <img src="https://contrib.rocks/image?repo=samyak2403/BannerAds />
-</a>
 
       
 
